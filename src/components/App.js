@@ -1,11 +1,9 @@
 import React from 'react';
 import '../styles/App.css';
+import { useParams } from 'react-router';
 
 const App = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const id = urlParams.get('id');
-  const name = urlParams.get('name');
-  const designation = urlParams.get('designation');
+  const { id, name, designation } = useParams();
 
   return (
     <div className='details'>
